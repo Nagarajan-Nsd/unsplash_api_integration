@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><img src="./logo/unplash_logo.png" width="30px"></div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button class="clear-btn" onclick="clearSearch()">&times;</button>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+
+        <div class="vertical-line"></div>
+
+        <div class="buttons">
+            <button class="login">Login / Signup</button>
+            <button class="submit-photo">Submit Photo</button>
+        </div>
+
+        <div class="toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <script>
+        function clearSearch() {
+            const searchInput = document.querySelector('.search-box input');
+            searchInput.value = '';
+        }
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+
+
+
+
+    <div class="gallery masonry" id="gallery"></div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" id="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="details" id="details"></div>
+            <div class="navigation">
+                <button id="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </button>
+                <button id="next"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+   
+
+
+
+
+
+
+    <footer class="footer">
+        <p>&copy; Siam Computing. All rights reserved.</p>
+    </footer>
+
+
+    <script async src="./javascript/script.js"></script>
+
+</body>
+
+</html>
