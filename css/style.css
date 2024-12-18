@@ -89,7 +89,36 @@ body {
     height: 22px;
 }
 
+ /* Responsive css */
+ @media (max-width: 768px) {
+    .masonry {
+        column-count: 2;
+    }
 
+    
+    .modal-content {
+        padding: 15px;
+    }
+
+    .gallery {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .masonry {
+        column-count: 1;
+    }
+
+    .modal-content {
+        padding: 10px;
+    }
+
+    .gallery {
+        padding: 0;
+        gap: 5px;
+    }
+} 
 #prev,#next{
     font-size: 20px;
     background: #cdcdcd;
